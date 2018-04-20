@@ -28,7 +28,6 @@ export default {
     await this.refreshActiveUser()
   },
   watch: {
-    // everytime a route is changed refresh the activeUser
     '$route': 'refreshActiveUser'
   },
   methods: {

@@ -15,7 +15,7 @@ app.use(cors())
 app.use(bodyParser.json())
 
 // verify JWT token middleware
-app.use((req, res, next) => {
+app.use(function (req, res, next) {
   if (!req.headers.authorization) {
     return next(new Error('Authorization header is required'))
   }
